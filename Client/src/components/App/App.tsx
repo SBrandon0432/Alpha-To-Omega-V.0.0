@@ -5,7 +5,7 @@ import Login from '../Login/Login'
 
 const App = () => {
   return (
-    <div className="App">
+    <div id="Login">
       <Login />
     </div>
   );

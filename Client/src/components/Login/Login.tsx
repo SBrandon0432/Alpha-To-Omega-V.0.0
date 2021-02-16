@@ -46,8 +46,8 @@ const Login = () => {
     )
   } else {
     return (
-      <div>
-        <Map />
+      <div className="Map" >
+          <Map />
       </div>
     )
   }
