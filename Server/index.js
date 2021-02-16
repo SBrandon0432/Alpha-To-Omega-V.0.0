@@ -33,3 +33,12 @@ client.connect((err) => {
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);
 });
+
+
+app.post('/login',
+  passport.authenticate('local'),
+  function(req, res) {
+    // If this function gets called, authentication was successful.
+    // `req.user` contains the authenticated user.
+    res.status(200).send(true);
+  });
