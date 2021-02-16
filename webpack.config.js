@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, './Client/src/index.jsx'),
+  entry: path.resolve(__dirname, './Client/src/index.tsx'),
   mode: 'development',
   output: {
     path: path.resolve(__dirname, './Client/Dist'),
@@ -15,13 +15,20 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
+      },
+      {
         test: /\.(scss)$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
+
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.scss'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
   },
+
 };
