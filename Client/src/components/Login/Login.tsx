@@ -8,6 +8,7 @@ const Login = () => {
     name: 'sam',
     pass: 'pass'
   }
+
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
 
@@ -25,7 +26,6 @@ const Login = () => {
       }
     })
   }
-
 
   if (!isLoggedIn) {
     return (
@@ -46,7 +46,9 @@ const Login = () => {
     )
   } else {
     return (
-      <Map />
+      <div>
+        <Map />
+      </div>
     )
   }
 
