@@ -1,6 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+// import MapboxDirections from '@mapbox/mapbox-gl-directions/src/index'
+// import fs from 'fs';
+// var MapboxDirections = require('@mapbox/mapbox-gl-directions');
+const MapboxDirections = require('@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions')
+import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
+
 
 const Map = () => {
 
@@ -18,8 +24,10 @@ const Map = () => {
       'top-left'
   );
 
+
+
   return (
-    <h1>testing</h1>
+    <h1 className="testing">testing</h1>
   );
 
 };
