@@ -5,7 +5,7 @@ const App = () => {
   console.log('in appp')
   return (
     <div className="App">
-      <h1>SAM</h1>
+
     </div>
   );
 };

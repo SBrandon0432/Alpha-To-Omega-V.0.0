@@ -1,3 +1,8 @@
+require("@babel/core").transform("code", {
+  filename: 'index.js',
+  presets: ["@babel/preset-typescript"],
+});
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const { Client } = require('pg');
