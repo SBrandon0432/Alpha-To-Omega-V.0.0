@@ -1,14 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 
-const Map = (props: { test: () => void, val: number }) => {
+const Map = () => {
   console.log('in map tsx');
-  let helloWorld: String;
+  let helloWorld: String = 'sam';
 
-  const {test, val} = props
-  if (val < 10) {
-    test();
-  }
+  console.log(helloWorld);
 
   return (
     <h1> test</h1>
