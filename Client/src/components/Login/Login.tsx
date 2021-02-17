@@ -4,13 +4,13 @@ import './LoginS.scss';
 import $ from 'jquery';
 
 const Login = () => {
+
   const message = {
     name: 'sam',
     pass: 'pass'
   }
 
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-
 
   function logged(){
     setIsLoggedIn(true);
@@ -29,7 +29,7 @@ const Login = () => {
 
   if (!isLoggedIn) {
     return (
-      <form onSubmit={logged} className="Login">
+      <form onSubmit={logged} id="Login">
         <h1>Alpha To Omega Adventure App </h1>
         <label>
           User Name:
@@ -46,7 +46,7 @@ const Login = () => {
     )
   } else {
     return (
-      <div className="Map" >
+      <div className= "Map" >
           <Map />
       </div>
     )

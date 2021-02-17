@@ -7,6 +7,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { Client } = require('pg');
 const path = require('path');
+const mgBox = require('./mgBox');
 
 const connectionString = 'postgres://postgres:postgres@localhost:5432/lego';
 
@@ -41,4 +42,8 @@ app.post('/login',
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
     res.status(200).send(true);
+  });
+
+  app.post('/map',(req, res) => {
+    console.log('testing up')
   });
