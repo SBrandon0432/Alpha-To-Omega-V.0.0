@@ -1,19 +1,36 @@
 import React from 'react';
 import { useState } from 'react';
+import NewRoute from './NewRoute';
 
-const Map = (props: { test: () => void, val: number }) => {
-  console.log('in map tsx');
-  let helloWorld: String;
+// const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+// const MapboxDirections = require('@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions')
+// import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
 
-  const {test, val} = props
-  if (val < 10) {
-    test();
-  }
+
+const Map = () => {
+
+  const [path, setPath] = useState<Array<any>>([]);
+
 
   return (
-    <h1> test</h1>
+    <div>
+
+    <form id="form">
+      <label>
+          test:
+        <input  type="text"  className="test"/>
+      </label>
+    </form>
+
+    <div>
+      < NewRoute />
+    </div>
+
+    </div>
   );
+
 };
 
-
 export default Map;
+
+

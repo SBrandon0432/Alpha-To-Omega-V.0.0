@@ -21,5 +21,8 @@
   ],
   "types": [
     "typePatches"
-  ]
+  ],
+  "declare": [
+    "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.js"
+  ],
 }

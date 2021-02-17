@@ -4,3 +4,4 @@ import App from './components/App/App'
 import './indexS.scss';
 
 render(<App />, document.getElementById('root'));
+
